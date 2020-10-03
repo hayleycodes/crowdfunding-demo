@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { oneProject } from "../data";
 
 function ProjectPage() {
   const [projectData, setProjectData] = useState({ pledges: [] });
@@ -14,7 +13,7 @@ function ProjectPage() {
       .then((data) => {
         setProjectData(data);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div>
